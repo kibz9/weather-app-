@@ -23,7 +23,7 @@ feels_like_kelvin = response['main']['feels_like']
 feels_like_celsius, feels_like_fahrenheit = kelvin_to_celsius_fahrenhit(feels_like_kelvin)
 wind_speed = response['wind']['speed']
 humidity = response['main']['humidity']
-description = response['weather'][0]['description']
+description = response['weather'][0]['description'] # weather  is a  list
 sunrise_time = dt.datetime.fromtimestamp(response['sys']['sunrise'] + response['timezone'])
 sunset_time = dt.datetime.fromtimestamp(response['sys']['sunset'] + response['timezone'])
 
@@ -37,6 +37,7 @@ print(f" Sunrise in {CITY}: {sunrise_time} local time")
 print(f" Sunset in {CITY}: {sunset_time} local time")
 
 print(response)
+
 
 
 
