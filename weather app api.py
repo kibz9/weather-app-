@@ -1,3 +1,4 @@
+# i have used an api key  for my wearther  to bring real time  weather  forecast
 import datetime as dt # this function is used  to send a http request
 import requests # use pip install request or pip3 install request
 #if both command dont work in the  terminal install pip use this command
@@ -38,6 +39,7 @@ print(f" Sunrise in {CITY}: {sunrise_time} local time")# in order to be able  to
 print(f" Sunset in {CITY}: {sunset_time} local time")
 print(response)
 #weather app api project
+
 
 
 
