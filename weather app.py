@@ -2,7 +2,7 @@ import datetime as dt
 import requests
 
 Base_URL = "https://api.openweathermap.org/data/2.5/weather"
-API_KEY = "be3d7ffb219ef3e5cd093beb966b1339"
+API_KEY = "your _api_key_here"# create an account using  open weather  app after creating click account then api key  then you will see an api key
 CITY = "kenya"
 
 def  kelvin_to_celsius_fahrenhit(kelvin):
@@ -33,3 +33,4 @@ print(f" Sunrise in {CITY}: {sunrise_time} local time")
 print(f" Sunset in {CITY}: {sunset_time} local time")
 
 print(response)
+
