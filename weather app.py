@@ -16,8 +16,7 @@ def  kelvin_to_celsius_fahrenhit(kelvin): # use both degrees or fahrenhit depend
     #i have used  a formula to change from fahrenhit  to degree celsius  above  use it to avoid any errors
 
 
-url = Base_URL + "?appid=" + API_KEY + "&q=" + CITY
-
+url = Base_URL + "?appid=" + API_KEY + "&q=" + CITY #request the API key from the weather service to retrieve the required weather information.
 response = requests.get(url).json() # json   help the python file to read the python dictionary
 temp_kelvin = response['main']['temp']
 temp_celsius, temp_fahrenheit = kelvin_to_celsius_fahrenhit(temp_kelvin)
@@ -27,8 +26,8 @@ wind_speed = response['wind']['speed']
 humidity = response['main']['humidity']
 description = response['weather'][0]['description'] # weather  is a  list
 sunrise_time = dt.datetime.fromtimestamp(response['sys']['sunrise'] + response['timezone'])
-sunset_time = dt.datetime.fromtimestamp(response['sys']['sunset'] + response['timezone'])
-
+sunset_time = dt.datetime.fromtimestamp(response['sys']['sunset'] + response['timezone']
+#
 print(f" Temperature in {CITY}: {temp_celsius:.2f}°C ({temp_fahrenheit:.2f}°F)")
 print(f" Feels like in {CITY}: {feels_like_celsius:.2f}°C ({feels_like_fahrenheit:.2f}°F)")
 print(f" Wind Speed in {CITY}: {wind_speed * 3.6:.2f} km/h")  # Convert m/s to km/h
@@ -39,6 +38,7 @@ print(f" Sunrise in {CITY}: {sunrise_time} local time")# in order to be able  to
 print(f" Sunset in {CITY}: {sunset_time} local time")
 print(response)
 #weather app api project
+
 
 
 
