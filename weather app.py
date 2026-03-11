@@ -8,7 +8,7 @@ import requests # use pip install request or pip3 install request
 Base_URL = "https://api.openweathermap.org/data/2.5/weather"
 API_KEY = "your _api_key_here"# create an account using  open weather  app after creating click account then api key  then you will see an api key
 CITY = "kenya" # enter a  any city after generating  an api king
-
+# as  a beginer  make sure  you  hide your  api  key for security  purposes  use enviroment variable as i have used
 def  kelvin_to_celsius_fahrenhit(kelvin): # use both degrees or fahrenhit depending  on your  location
     celsius = kelvin - 273.15
     fahrenheit = (celsius * 9/5) + 3
@@ -16,7 +16,7 @@ def  kelvin_to_celsius_fahrenhit(kelvin): # use both degrees or fahrenhit depend
 
 url = Base_URL + "?appid=" + API_KEY + "&q=" + CITY
 
-response = requests.get(url).json()
+response = requests.get(url).json() # json   help the python file to read the python dictionary
 temp_kelvin = response['main']['temp']
 temp_celsius, temp_fahrenheit = kelvin_to_celsius_fahrenhit(temp_kelvin)
 feels_like_kelvin = response['main']['feels_like']
@@ -33,10 +33,11 @@ print(f" Wind Speed in {CITY}: {wind_speed * 3.6:.2f} km/h")  # Convert m/s to k
 print(f" Humidity in {CITY}: {humidity}%")
 print(f" Description in {CITY}: {description}")
 print(f"general weather in {CITY}: {description}")
-print(f" Sunrise in {CITY}: {sunrise_time} local time")
+print(f" Sunrise in {CITY}: {sunrise_time} local time")# in order to be able  to get  the weather forecost for diffrent  places in the word
 print(f" Sunset in {CITY}: {sunset_time} local time")
-
 print(response)
+#weather app api project
+
 
 
 
