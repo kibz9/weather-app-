@@ -10,9 +10,11 @@ API_KEY = "your _api_key_here"# create an account using  open weather  app after
 CITY = "kenya" # enter a  any city after generating  an api key
 # as  a beginer  make sure  you  hide your  api  key for security  purposes  use enviroment variable as i have used
 def  kelvin_to_celsius_fahrenhit(kelvin): # use both degrees or fahrenhit depending  on your  location
-    celsius = kelvin - 273.15
+    celsius = kelvin - 273.15 
     fahrenheit = (celsius * 9/5) + 3
     return celsius, fahrenheit
+    #i have used  a formula to change from fahrenhit  to degree celsius  above  use it to avoid any errors
+
 
 url = Base_URL + "?appid=" + API_KEY + "&q=" + CITY
 
@@ -37,6 +39,8 @@ print(f" Sunrise in {CITY}: {sunrise_time} local time")# in order to be able  to
 print(f" Sunset in {CITY}: {sunset_time} local time")
 print(response)
 #weather app api project
+
+
 
 
 
