@@ -1,4 +1,4 @@
-import datetime as dt
+import datetime as dt # this function is used  to send a http request
 import requests # use pip install request or pip3 install request
 #if both command dont work in the  terminal install pip use this command
 # python -m ensurepip --upgrade  after typing this command type
@@ -37,6 +37,7 @@ print(f" Sunrise in {CITY}: {sunrise_time} local time")
 print(f" Sunset in {CITY}: {sunset_time} local time")
 
 print(response)
+
 
 
 
