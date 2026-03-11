@@ -7,9 +7,9 @@ import requests # use pip install request or pip3 install request
 
 Base_URL = "https://api.openweathermap.org/data/2.5/weather"
 API_KEY = "your _api_key_here"# create an account using  open weather  app after creating click account then api key  then you will see an api key
-CITY = "kenya"
+CITY = "kenya" # enter a  any city after generating  an api king
 
-def  kelvin_to_celsius_fahrenhit(kelvin):
+def  kelvin_to_celsius_fahrenhit(kelvin): # use both degrees or fahrenhit depending  on your  location
     celsius = kelvin - 273.15
     fahrenheit = (celsius * 9/5) + 3
     return celsius, fahrenheit
@@ -37,5 +37,6 @@ print(f" Sunrise in {CITY}: {sunrise_time} local time")
 print(f" Sunset in {CITY}: {sunset_time} local time")
 
 print(response)
+
 
 
